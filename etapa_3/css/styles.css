@@ -59,27 +59,41 @@ img {
     height: 500px;
     width: 500px;
 }
-  .ucs {
-    background-color: #282828;
-    padding: 1.5rem;
-    margin: 2rem 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    position: relative;
-    left: 5px;
-  }
-  
-  .ucs h3 {
-    color: #ffcc00;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-  
-  .ucs ul {
-    list-style: square;
-    padding-left: 1.5rem;
-    color: #ddd;
-  }
+.ucs {
+  margin: 1.5rem 0;
+  background-color: #444;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.ucs h3 {
+  color: #ffcc00;
+  margin-bottom: 0.5rem;
+}
+
+.ucs ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: #ddd;
+}
+
+.ucs button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.ucs button:hover {
+  background-color: #e6b800;
+}
+
   
 
   .info {
@@ -120,4 +134,12 @@ img {
   .links a:hover {
     color: #ffffff;
     text-decoration: underline
+  }
+
+  input.invalid {
+    border: 2px solid red;
+  }
+  
+  input.invalid {
+    border: 2px solid red;
   }
