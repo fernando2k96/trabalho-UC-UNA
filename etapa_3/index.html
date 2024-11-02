@@ -14,7 +14,34 @@
       <h2>Análise e desenvolvimento de sistemas 4º período</h2>
       <h3>Rua Rua Aiuruoca Bairro São Paulo</h3>
       <p>Email: fernandohd6670@gmail.com</p>
+      <div class="form-group">
+        <label for="cpf">CPF:</label>
+        <input
+          type="text"
+          id="cpf"
+          name="cpf"
+          placeholder="000.000.000-00"
+          onblur="validateCPF()"
+        />
+        <span id="cpf-error" style="color: red; display: none"
+          >CPF inválido</span
+        >
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="exemplo@dominio.com"
+          onblur="validateEmail()"
+        />
+        <span id="email-error" style="color: red; display: none"
+          >E-mail inválido</span
+        >
+      </div>
     </header>
+
     <main>
       <div class="carrossel">
         <div class="container" id="img">
@@ -24,36 +51,70 @@
         </div>
       </div>
       <div class="ucs">
-        <ul>
-          <h3>UCs já cursadas</h3>
-          <li>Modelagem de software</li>
-          <li>Programação de soluções computacionais</li>
-          <li>Ambientes computacionais e conectividade</li>
-          <li>Sistemas computacionais e segurança</li>
-          <li>Gestão e qualidade de software</li>
-          <li>Modelos, métodos e técnicas da engenharia de software</li>
-          <li>Inovação, sustentabilidade e competitividade empresarial</li>
-          <li>Usabilidade, desenvolvimento web, mobile e jogos</li>
+        <h3>UCs já cursadas</h3>
+        <ul id="uc-list">
+          <li draggable="true">
+            Modelagem de software <button onclick="moveUp(this)">▲</button>
+            <button onclick="moveDown(this)">▼</button>
+          </li>
+          <li draggable="true">
+            Programação de soluções computacionais
+            <button onclick="moveUp(this)">▲</button>
+            <button onclick="moveDown(this)">▼</button>
+          </li>
+          <li draggable="true">
+            Ambientes computacionais e conectividade
+            <button onclick="moveUp(this)">▲</button>
+            <button onclick="moveDown(this)">▼</button>
+          </li>
+          <li draggable="true">
+            Sistemas computacionais e segurança
+            <button onclick="moveUp(this)">▲</button>
+            <button onclick="moveDown(this)">▼</button>
+          </li>
+          <li draggable="true">
+            Gestão e qualidade de software
+            <button onclick="moveUp(this)">▲</button>
+            <button onclick="moveDown(this)">▼</button>
+          </li>
+          <li draggable="true">
+            Modelos, métodos e técnicas da engenharia de software
+            <button onclick="moveUp(this)">▲</button>
+            <button onclick="moveDown(this)">▼</button>
+          </li>
+          <li draggable="true">
+            Inovação, sustentabilidade e competitividade empresarial
+            <button onclick="moveUp(this)">▲</button>
+            <button onclick="moveDown(this)">▼</button>
+          </li>
+          <li draggable="true">
+            Usabilidade, desenvolvimento web, mobile e jogos
+            <button onclick="moveUp(this)">▲</button>
+            <button onclick="moveDown(this)">▼</button>
+          </li>
         </ul>
+        <button onclick="addUC()">Adicionar UC</button>
       </div>
 
       <div class="info">
-            <h3>Sobre mim</h3>
+        <h3>Sobre mim</h3>
         <p>
-          Me chamo Fernando, tenho 28 anos, estou no quarto período de ADS
-          atualmente trabalho em família, mas estudo desenvolvimento Front End
-          por fora através de cursos e certificações. Tenho uma família
-          gigantesca com 400 primos. Meus passatempos são andar de skate já que
-          faz 11 anos, curto jogar quando tenho tempo e gosto de dá um role com
-          a galera em shows e boates. 
+          Me chamo Fernando, tenho 28 anos, estou no quarto período de ADS.
+          Atualmente trabalho em família, mas estudo desenvolvimento Front End
+          por fora através de cursos e certificações.
         </p>
         <p>
-          Eu fiz estagio no começo do ano como suporte N2 em desenvolvimento,
+          Eu fiz estágio no começo do ano como suporte N2 em desenvolvimento,
           depois em QA na mesma empresa. Depois fiz um freelancer em suporte
-          infraestrutura suporte Helpdesk.
+          infraestrutura e suporte Helpdesk.
         </p>
+      
+        <input type="text" id="new-info" placeholder="Adicione uma nova informação" />
+        <button onclick="addInfo()">Adicionar Informação</button>
+       
+        <div id="additional-info"></div>
       </div>
-
+      
       <div class="links">
         <a href="https://www.linkedin.com/in/fernando-oliveira-865bb4220/"
           >Linkedin</a
